@@ -9,13 +9,13 @@ public class App {
 		//	Create a container to hold students
 		List<Student> students = new ArrayList<Student>();
 		int numOfStudents = 10;
-		int mark = (int)(Math.random() * 120) + 1;
+		int mark = (int)(Math.random() * 220) + 1;
 		
 		// Add student to list
 		for (int i =0; i< numOfStudents; i++) {
 			Student student_temp = new Student(i, "Student " + (i+1));
 			
-			if (mark >= 0 || mark <= 100) {
+			if (mark >= 0 && mark <= 100) {
 				student_temp.setStudentMark(mark);
 				students.add(student_temp);
 		    }else {
@@ -25,7 +25,7 @@ public class App {
 		
 		//	Test 
 		for (int i =0; i< numOfStudents; i++) {
-			System.out.println(students.get(i).getStudentName());
+			System.out.println(students.get(i).getStudentMark());
 		}
 		
 	}
