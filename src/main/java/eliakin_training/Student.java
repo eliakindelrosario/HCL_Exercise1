@@ -29,11 +29,7 @@ public class Student {
     // Student Mark - Setter
     public void setStudentMark(int mark)
     {
-       if (mark >= 0 || mark <= 100) {
-    	   this.StudentMark = mark;
-       }else {
-    	   throw new StudentException("Mark cannot be 0 < or > 100");  
-       }
+       this.StudentMark = mark;
     }
 	
 	
